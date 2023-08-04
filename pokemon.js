@@ -1072,17 +1072,45 @@ function pokemon() {
     const pokemonName = document.createElement("h2");
     pokemonName.textContent = pokemon.name;
 
-    const pokemonType = document.createElement("p");
-    pokemonType.textContent = `type: ${pokemon.type}`;
+    const Type = document.createElement("span");
+    Type.textContent = `type:`;
+    const pokemonType1 = document.createElement("span");
+    const pokemonType2 = document.createElement("span");
+    
+
+    const type = pokemon.type.split(",");
+    pokemonType1.textContent = ` ${type[0]}`;
+   
+
+    if (type.length == 1) {
+      pokemonType1.textContent = ` ${type[0]}`;
+      pokemonType1.className = type[0];
+    } else {
+      pokemonType1.textContent = ` ${type[0]}`;
+      pokemonType1.className = type[0];
+      pokemonType2.textContent = ` ${type[1]}`;
+      pokemonType2.className = type[1];
+    }
+
 
     pokemonCard.appendChild(pokemonImage);
     pokemonCard.appendChild(pokemonName);
-    pokemonCard.appendChild(pokemonType);
+    pokemonCard.appendChild(Type);
+    pokemonCard.appendChild(pokemonType1);
+    pokemonCard.appendChild(pokemonType2);
     pokemonInfoContainer.appendChild(pokemonCard);
   });
 }
 
+function typePokemon(pokemonTypeHtml, type) {
+  if (type[0] == "grass") {
+    pokemonTypeHtml.className = "grass";
+  }
 
+  if (type[0] == "poison") {
+    pokemonTypeHtml.className = "poison";
+  }
+}
 document.addEventListener("DOMContentLoaded", pokemon);
 
 // document.addEventListener("DOMContentLoaded", pokemon);

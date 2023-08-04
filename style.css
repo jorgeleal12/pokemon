@@ -42,5 +42,32 @@ h1{
 }
 .card p{
     margin-top: 5px;
-    color: #666;
+    /* color: #666; */
 }
+
+.card>span{
+font-weight: bold;
+}
+.grass{
+color: green;
+}
+.poison{
+color: purple;
+}
+.fire{
+color: red;
+}
+.flying{
+ color: rgb(38, 158, 218);
+}
+.water{
+color: blue;
+}
+.bug{}
+
+.normal{}
+
+.electric{
+
+}
+.ground{}
