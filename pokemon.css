@@ -1,0 +1,262 @@
+/*
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0,01);
+}
+
+.card{
+    height: 260px;
+    width: 150px;
+    padding: 2px 2px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0, 0, 0,01);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h3{
+    margin-top: 10px;
+}
+
+.card p{
+    margin-top: 5px;
+    color: #666;
+}
+
+.card-container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h1{
+    text-align: center;
+}*/
+.card>span{
+    font-weight: bold;
+}
+
+.Grass{
+    color: green;
+}
+
+.Poison{
+    color: rgb(193, 2, 193);
+}
+
+.Fire{
+    color: red;
+}
+
+.Flying{
+    color: rgb(38, 158, 218);
+}
+
+.Water{
+    color: blue;
+}
+
+.Electric{
+    color: yellow;
+}
+
+.ground{
+    color: rgb(181, 71, 71);
+}
+
+.normal{
+    color: #ffc36a;
+}
+
+.fairy{
+    color: #ff8ba0;
+}
+
+.bug{
+    color: #6ffa6f;
+}
+
+.psychic{
+    color: #f64a67;
+}
+
+.rock{
+    color: #636161;
+}
+
+.ice{
+    color: #40CFFF;
+}
+
+.dragon{
+    color: #503838 ;
+}
+
+.fighting{
+    color: #8d0505;
+}
+
+.ghost{
+    color: #5c2c69;
+}
+
+.steel{
+    color: #C0C0C0;
+}
+
+/*
+@media (min-width: 320px) and (max-width: 424px) {
+    .card {
+    width: 300px;
+    font-size: 20px;
+    background-color: blueviolet;
+}
+}
+
+@media (min-width: 480px) and (max-width: 2560px) {
+    .card  {
+    width: 180px;
+    font-size: 20px;
+    background-color: green;
+
+}
+}*/
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif; /*cambia el estilo de letra*/
+    margin: 0; /*margen 0 a toda la hoja*/
+    padding: 0; /*  quita el area de la hoja */
+    background-color: #cecccc; /*color del fondo del la pagina*/
+}
+
+.titulo{
+    margin-top: 50px; /* separo la caja de la parte arriba*/
+    max-width: 350px; /* ancho maximo */
+    margin-left: auto; /* para centrar horizontalmente */
+    margin-right: auto; /* para centrar horizontalmente */
+    padding: 20px; /* nos da un area  */
+    background-image: linear-gradient(red, black, White);  /* degradado de la caja*/
+    color: #ffffff;/*color de la letra*/
+    border-radius: 40px;/* quitarle las puntas y volverlas redondas*/
+    box-shadow: 0 2px 4px rgb(255, 255, 255); /* darle una sombra a la caja*/
+    text-align: center; /*centro la letra*/
+}
+
+
+
+
+.card{
+    margin-top: 90px; /* darle un margen a la carta*/
+    height: 300px; /* la altura que tiene la carta*/
+    width: 180px; /* el ancho que tiene la carta*/
+    padding: 2px 2px; /* area de la carta*/
+    background-color: #000000; /* color de la carta*/
+    box-shadow: 0 2px 15px rgb(249, 180, 180); /*sombra de la carta*/
+    border-radius: 15px; /* borde de la carta*/
+}
+
+.card {
+    position: relative; /* se utiliza para posicionar los hijos de manera absoluta*/
+    backface-visibility:hidden; /*se utiliza para hacer visible la parte trasera cuando se haya completado la transformacion*/
+    overflow: hidden; /* si el contenido de la carta es mas grande lo corta*/
+    transition: .5s; /* los segundos que se demora en girar*/
+}
+
+/*sirve para una rotación en el eje Y (rotateY) de 180 grados al elemento. Además, se le da una perspectiva 
+3D (perspective) de 600 píxeles. Esto crea el efecto de volteo hacia atrás y muestra el contenido del reverso de 
+la tarjeta cuando el usuario pasa el cursor sobre ella.*/
+/* .card:hover {
+    transform: perspective(600px) rotateY(180deg);
+    background-color: white;
+}
+
+.card:hover{
+    transform: perspective(600px) rotateY(360deg);
+    background-color: rgb(255, 0, 0);
+} */
+.imagenNoVisible{
+transition-delay: 50ms;
+ visibility: hidden;
+  
+ /* transform: perspective(600px) rotateY(180deg);
+ background-color: rgb(255, 0, 0); */
+}
+.imagenVisible{
+    visibility: visible;
+}
+.fondo1{
+    transition-delay: 100ms;
+    transform: perspective(600px) rotateY(360deg);
+    background-color: #40CFFF;
+}
+.fondo2{
+    transform: perspective(600px) rotateY(0deg);
+    background-color: #5c2c69;
+}
+.hidden{
+    margin-top: -50px;
+    visibility: hidden;
+}
+.visibility{
+    transition-delay: 10ms;
+    margin-top: 100px;
+    visibility: visible; 
+}
+
+.card img{
+    display: block; /* sirve para tratar la imagen como un objecto*/
+    margin-top: 5px; /* darle un espacion en la parte de arriba de la imagen*/
+    margin-left: auto; /* para centrar horizontalmente */
+    margin-right: auto; /* para centrar horizontalmente */
+    width: 95%; /* ancho de la imagen*/
+    border-radius: 10px; /*bordede la imagen*/
+    background-color: #fff; /* color de la carta*/
+}
+
+.card{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* estilo de letra de la carta*/
+    text-align: center; /* alinear el texto de las cartas*/
+    margin-top: 5%; /*margen que de las p y h2 de las cartas*/
+    color: #ffffff; /* color de las letras de las cartas*/
+}
+
+.card-container {
+    padding: 20px; /* espacio de relleno de las cartas*/
+    display: flex; /* vuele los contenedores flexible */
+    justify-content: center; /* centra los elementos hijos del contenedor horizontalmente */
+    flex-wrap: wrap; /* ubicarlos en la parte de abajo cuando no hay espacio */
+    gap: 20px; /* espacio entre cada elemento hijo (carta) del contenedor */
+}
+
+.card span{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.card h2{
+    font-size: 25px;
+    line-height: 10px;
+}
+
+
+
+
+
+
